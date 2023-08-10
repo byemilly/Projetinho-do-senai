@@ -1,28 +1,18 @@
 #include <iostream>
-using namespace std;
-
-bool isPrimo(int numero) {
-    if (numero < 2) {
-        return false;
-    }
-    for (int i = 2; i <= numero / 2; i++) {
-        if (numero % i == 0) {
-            return false;
-        }
-    }
-    return true;
-}
 
 int main() {
-    int numero;
-    cout << "Digite um número inteiro: ";
-    cin >> numero;
+    int temperaturas[5];
+    int soma = 0;
 
-    if (isPrimo(numero)) {
-        cout << numero << " é um número primo." << endl;
-    } else {
-        cout << numero << " não é um número primo." << endl;
+    std::cout << "Digite a temperatura média dos planetas (em graus Celsius): " << std::endl;
+    for (int i = 0; i < 5; i++) {
+        std::cin >> temperaturas[i];
+        soma += temperaturas[i];
     }
+
+    float media = static_cast<float>(soma) / 5;
+
+    std::cout << "Temperatura média dos planetas: " << media << " graus Celsius" << std::endl;
 
     return 0;
 }

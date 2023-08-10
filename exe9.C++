@@ -1,22 +1,16 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-    bool valor1, valor2;
-    cout << "Digite o primeiro valor (0 para false, 1 para true): ";
-    cin >> valor1;
-    cout << "Digite o segundo valor (0 para false, 1 para true): ";
-    cin >> valor2;
+    float luminosidade[10] = {80, 105, 90, 120, 150, 75, 200, 180, 50, 110};
 
-    bool resultado_and = valor1 && valor2;
-    bool resultado_or = valor1 || valor2;
-    bool resultado_not1 = !valor1;
-    bool resultado_not2 = !valor2;
+    int estrelas_com_luminosidade_superior_100x = 0;
+    for (int i = 0; i < 10; i++) {
+        if (luminosidade[i] > 100) {
+            estrelas_com_luminosidade_superior_100x++;
+        }
+    }
 
-    cout << "Resultado do AND: " << resultado_and << endl;
-    cout << "Resultado do OR: " << resultado_or << endl;
-    cout << "Resultado do NOT do primeiro valor: " << resultado_not1 << endl;
-    cout << "Resultado do NOT do segundo valor: " << resultado_not2 << endl;
+    std::cout << "Número de estrelas com luminosidade superior a 100 vezes a luminosidade do Sol: " << estrelas_com_luminosidade_superior_100x << std::endl;
 
     return 0;
 }

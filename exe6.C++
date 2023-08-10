@@ -1,17 +1,16 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-    float nota1, nota2, nota3;
-    cout << "Digite a primeira nota: ";
-    cin >> nota1;
-    cout << "Digite a segunda nota: ";
-    cin >> nota2;
-    cout << "Digite a terceira nota: ";
-    cin >> nota3;
+    float massa[7] = {2.5, 3.1, 1.8, 4.2, 2.9, 3.7, 3.5};
 
-    float media = (nota1 + nota2 + nota3) / 3;
-    cout << "A média das notas é: " << media << endl;
+    int estrelas_com_massa_superior_3x = 0;
+    for (int i = 0; i < 7; i++) {
+        if (massa[i] > 3) {
+            estrelas_com_massa_superior_3x++;
+        }
+    }
+
+    std::cout << "Número de estrelas com massa superior a 3 vezes a massa do Sol: " << estrelas_com_massa_superior_3x << std::endl;
 
     return 0;
 }

@@ -1,15 +1,25 @@
 #include <iostream>
-using namespace std;
+#include <string>
 
 int main() {
-    int numero;
-    cout << "Digite um número inteiro: ";
-    cin >> numero;
+    std::string constelacoes[5] = {"Órion", "Andrômeda", "Centauro", "Cassiopeia", "Touro"};
 
-    if (numero % 2 == 0) {
-        cout << "O número é par." << endl;
+    std::string constelacao_desejada;
+    std::cout << "Digite o nome de uma constelação: ";
+    std::getline(std::cin >> std::ws, constelacao_desejada);
+
+    bool encontrada = false;
+    for (int i = 0; i < 5; i++) {
+        if (constelacoes[i] == constelacao_desejada) {
+            encontrada = true;
+            break;
+        }
+    }
+
+    if (encontrada) {
+        std::cout << "A constelação está presente no vetor." << std::endl;
     } else {
-        cout << "O número é ímpar." << endl;
+        std::cout << "A constelação não está presente no vetor." << std::endl;
     }
 
     return 0;

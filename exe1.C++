@@ -1,15 +1,16 @@
 #include <iostream>
-using namespace std;
+#include <string>
+#include <algorithm>
 
 int main() {
-    float num1, num2;
-    cout << "Digite o primeiro número: ";
-    cin >> num1;
-    cout << "Digite o segundo número: ";
-    cin >> num2;
+    std::string planetas[5] = {"Vênus", "Terra", "Marte", "Júpiter", "Saturno"};
 
-    float soma = num1 + num2;
-    cout << "A soma dos números é: " << soma << endl;
+    std::sort(planetas, planetas + 5);
+
+    std::cout << "Nomes dos planetas em ordem alfabética:" << std::endl;
+    for (int i = 0; i < 5; i++) {
+        std::cout << planetas[i] << std::endl;
+    }
 
     return 0;
 }

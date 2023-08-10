@@ -1,19 +1,18 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-    int numero, fatorial = 1;
-    cout << "Digite um número inteiro: ";
-    cin >> numero;
+    float magnitude[6];
+    float soma = 0;
 
-    if (numero < 0) {
-        cout << "Não é possível calcular o fatorial de um número negativo." << endl;
-    } else {
-        for (int i = 1; i <= numero; i++) {
-            fatorial *= i;
-        }
-        cout << "O fatorial de " << numero << " é: " << fatorial << endl;
+    std::cout << "Digite a magnitude das estrelas: " << std::endl;
+    for (int i = 0; i < 6; i++) {
+        std::cin >> magnitude[i];
+        soma += magnitude[i];
     }
+
+    float media = soma / 6;
+
+    std::cout << "Magnitude média das estrelas: " << media << std::endl;
 
     return 0;
 }

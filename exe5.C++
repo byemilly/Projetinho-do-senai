@@ -1,17 +1,14 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-    int num1, num2, num3;
-    cout << "Digite o primeiro número inteiro: ";
-    cin >> num1;
-    cout << "Digite o segundo número inteiro: ";
-    cin >> num2;
-    cout << "Digite o terceiro número inteiro: ";
-    cin >> num3;
+    int massa[8] = {0, 0, 1, 0, 0, 3, 0, 2};
 
-    int maior = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
-    cout << "O maior valor é: " << maior << endl;
+    int massa_total = 0;
+    for (int i = 0; i < 8; i++) {
+        massa_total += massa[i];
+    }
+
+    std::cout << "Massa total dos planetas anões (em massa terrestre): " << massa_total << std::endl;
 
     return 0;
 }
