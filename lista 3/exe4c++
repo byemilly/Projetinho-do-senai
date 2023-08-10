@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int codigo_acesso, codigo_correto = 1966;
+    cout << "Digite o código de acesso (4 dígitos): ";
+    cin >> codigo_acesso;
+
+    if (codigo_acesso == codigo_correto) {
+        cout << "Acesso autorizado!" << endl;
+    } else {
+        cout << "Acesso negado!" << endl;
+    }
+
+    return 0;
+}
